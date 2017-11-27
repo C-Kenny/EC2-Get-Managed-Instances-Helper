@@ -9,7 +9,7 @@ The EC2-Get-Managed-Instances-Helper tool will output a list of instances that a
 Managed instances are configured by EC2Config / EC2Launch. Managed by the AWS EC2 Systems Manager
 
 
-##Pre-requisites:
+## Pre-requisites:
 
 Systems manager has prerequisties for the EC2 Systems Manager to run.
 See https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html#systems-manager-prereqs
@@ -37,10 +37,7 @@ Instances must run a supported version of Linux.
 ```
 
 
-##How it is used:
-
-
-##Glossary:
+## Glossary:
 - EC2Config
     - Detailed view of config layout of AWS resources e.g. how resources are related to each other, includes relationships over time
     - EC2Config used for Windows Amazon Machine Images (AMIs)
@@ -56,15 +53,17 @@ Instances must run a supported version of Linux.
 - Managed Instances
     - EC2 Systems that are currently in the EC2 systems manager
 
-##Steps to resolve:
+## Steps to resolve:
 1. Create 2 EC2 instances on AWS
 2. Setup EC2 systems manager
 3. Add 1 EC2 instance to the systems manager
 4. Find API call to get managed instances from EC2 Systems Manager
 5. Find API call for all EC2 instances
 
+## USAGE: 
+`python3 find_ec2_not_managed_using_manager.py`
 
-##GOTCHAS:
+## GOTCHAS:
 
 - Instance profile role for Systems manager:
     - Role name: EC2_Systems_Manager_Role
