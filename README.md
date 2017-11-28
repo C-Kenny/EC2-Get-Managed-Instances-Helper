@@ -44,7 +44,7 @@ Instances must run a supported version of Linux.
 
 - EC2Launch:
     - EC2Launch is a set of Windows PowerShell scripts that replaces the EC2Config service on Windows Server 2016 AMIs.
-        - It performs steps like setting up computer name, wallpaper and instance info back to EC2 console
+    - It performs steps like setting up computer name, wallpaper and instance info back to EC2 console
 
 - Amazon EC2 Systems Manager
     - Helps with questions like: How many instances are running a particular version of software?
@@ -53,12 +53,6 @@ Instances must run a supported version of Linux.
 - Managed Instances
     - EC2 Systems that are currently in the EC2 systems manager
 
-## Steps to resolve:
-1. Create 2 EC2 instances on AWS
-2. Setup EC2 systems manager
-3. Add 1 EC2 instance to the systems manager
-4. Find API call to get managed instances from EC2 Systems Manager
-5. Find API call for all EC2 instances
 
 ## USAGE: 
 `python3 find_ec2_not_managed_using_manager.py`
