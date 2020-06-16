@@ -23,10 +23,8 @@ Assumptions:
 Usage:  python3 find_ec2_not_managed_using_manager.py
 Author: Carl Kenny
 """
-
 import boto3
 from pprint import pprint
-
 
 def get_all_ec2_instances_list():
     """
@@ -66,12 +64,10 @@ def get_unmanaged_ec2_instances():
     """
     all_instance_ids = get_all_ec2_instances_list()
     print("All instance Id's: {}".format(all_instance_ids))
-    print()
-    print()
+    print('\n' * 2)
     ssm_managed_instance_ids = get_managed_by_ssm_instances_list()
     print("SSM managed instances: {}".format(ssm_managed_instance_ids))
-    print()
-    print()
+    print('\n' * 2)
     instances_not_managed = list(set(all_instance_ids).difference(ssm_managed_instance_ids))
     print("Instances not managed by ssm: {}".format(instances_not_managed))
 
